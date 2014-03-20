@@ -1,0 +1,4 @@
+---
+# Variables listed here are applicable for common tasks
+
+rpm_folder: repo-rpm

@@ -1,0 +1,20 @@
+---
+# This playbook contains the plays to add the RPM Fusion repo
+
+- name: Install wget
+  action: yum name='wget' state=installed
+
+- name: Download Repository RPM
+  action: command creates=${rpm_folder} chdir=${rpm_folder} getrepository.sh
+
+- name: Add repo GPG key
+  action: command rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
+
+- name: Verify Downloaded RPM
+  action: command rpm -K rpmforge-release-0.5.3-1.el6.rf.*.rpm
+
+- name: Install the repository package
+  action: rpm -i rpmforge-release-0.5.3-1.el6.rf.*.rpm
+
+- name: Update yum database
+  action: command yum update
