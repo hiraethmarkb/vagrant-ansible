@@ -1,4 +1,11 @@
-- hosts: vagrant
+---
+# This playbook deploys the whole application stack in this site
+
+- name: Apply common configuration 
+  hosts: vagrant
   sudo: true
+  
   roles:
     - common
+    - web
+    - db
