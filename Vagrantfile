@@ -21,6 +21,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # VM provisioning config - yay! we're using ansible
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
+    #ansible.inventory_path = "provisioning/ansible_hosts"
+    ansible.host_key_checking = "false"
+    ansible.verbose = "v"
+    #ansible.verbose = "vv"
+    #ansible.verbose = "vvv"
+    #ansible.verbose = "vvvv"
   end
 
 end

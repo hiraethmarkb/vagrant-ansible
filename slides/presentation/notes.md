@@ -31,6 +31,10 @@ Following on from Andrew's talk last month about using Vagrant for creating repe
       - 2014.02: Talk by Andrew Donaldson http://lanyrd.com/2014/ccn1402/scxfgy/
     - Vagrant Anisble Provisioning Example from hnakamur
       - https://github.com/hnakamur/vagrant-ansible-provisioning-example
+    - Ansible: Server configuration the easy way - Stefan Wienert
+      - http://www.stefanwienert.net/blog/2013/09/28/ansible-server-configuration-the-easy-way/
+    - Ansible Issue Queue: creating several directories doesn't recursively set owner and group #3141
+      - https://github.com/ansible/ansible/issues/3141
 
 
   ## Questions ?
