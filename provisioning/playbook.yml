@@ -1,4 +1,21 @@
-- hosts: vagrant
+---
+# This playbook deploys the whole application stack in this site
+
+- name: Apply common configuration 
+  hosts: all
   sudo: true
+ 
+  vars:   
+    epel_rpm: epel-release-6-8.noarch.rpm
+    epel_rpm_url: http://download.fedoraproject.org/pub/epel/6/i386/{{ epel_rpm }}
+
+    free_rpm: rpmfusion-free-release-6-1.noarch.rpm
+    free_rpm_url: http://download1.rpmfusion.org/free/el/updates/6/i386/{{ free_rpm }}
+
+    nonfree_rpm: rpmfusion-nonfree-release-6-1.noarch.rpm
+    nonfree_rpm_url: http://download1.rpmfusion.org/nonfree/el/updates/6/i386/{{ nonfree_rpm }}
+
   roles:
     - common
+#    - web
+#    - db
