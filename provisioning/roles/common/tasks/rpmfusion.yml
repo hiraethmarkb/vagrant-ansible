@@ -1,20 +1,8 @@
 ---
 # This playbook contains the plays to add the RPM Fusion repo
 
-- name: Install wget
-  action: yum name='wget' state=installed
+- name: Download Repository RPM (EPEL)
+  action: command rpm -Uvh {{ epel_rpm_url }}
 
-- name: Create directory for Repository RPM
-  file: path="{{ rpm_path }}" owner=vagrant group=vagrant state=directory
-
-- name: Download Repository RPM
-  action: command wget -nc {{ rpm_url }} chdir={{ rpm_folder }} creates={{ rpm_folder }}
-
-- name: Add repo GPG key
-  action: command rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
-
-- name: Verify Downloaded RPM
-  action: command rpm -K {{ rpm_path }}/{{ rpm }}
-
-- name: Install the repository package
-  action: command rpm -i {{ rpm_path }}/{{ rpm }}
+- name: Download Repository RPM (RPM Fusion Free and Non-Free)
+  action: command yum localinstall --nogpgcheck {{ free_rpm_url }} {{ nonfree_rpm_url }}

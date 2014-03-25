@@ -5,11 +5,15 @@
   hosts: all
   sudo: true
  
-  vars:
-    rpm_folder: repo-rpm
-    rpm_path: /home/vagrant/{{ rpm_folder }}
-    rpm: rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
-    rpm_url: http://packages.sw.be/rpmforge-release/{{ rpm }}
+  vars:   
+    epel_rpm: epel-release-6-8.noarch.rpm
+    epel_rpm_url: http://download.fedoraproject.org/pub/epel/6/i386/{{ epel_rpm }}
+
+    free_rpm: rpmfusion-free-release-6-1.noarch.rpm
+    free_rpm_url: http://download1.rpmfusion.org/free/el/updates/6/i386/{{ free_rpm }}
+
+    nonfree_rpm: rpmfusion-nonfree-release-6-1.noarch.rpm
+    nonfree_rpm_url: http://download1.rpmfusion.org/nonfree/el/updates/6/i386/{{ nonfree_rpm }}
 
   roles:
     - common
