@@ -8,7 +8,7 @@
   file: path="{{ rpm_path }}" owner=vagrant group=vagrant state=directory
 
 - name: Download Repository RPM
-  action: command wget -nc {{ rpm_url }}/{{ rpm }} chdir={{ rpm_folder }} creates={{ rpm_folder }}
+  action: command wget -nc {{ rpm_url }} chdir={{ rpm_folder }} creates={{ rpm_folder }}
 
 - name: Add repo GPG key
   action: command rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt

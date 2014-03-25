@@ -8,9 +8,9 @@
   vars:
     rpm_folder: repo-rpm
     rpm_path: /home/vagrant/{{ rpm_folder }}
-    rpm_url: http://packages.sw.be/rpmforge-release
     rpm: rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
-    
+    rpm_url: http://packages.sw.be/rpmforge-release/{{ rpm }}
+
   roles:
     - common
 #    - web
