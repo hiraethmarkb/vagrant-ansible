@@ -18,6 +18,3 @@
 
 - name: Install the repository package
   action: command rpm -i {{ rpm_path }}/{{ rpm }}
-
-- name: Update yum database
-  action: command yum update
