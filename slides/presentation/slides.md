@@ -140,3 +140,13 @@ Loads of examples online
 - Vagrant Anisble Provisioning Example from hnakamur https://github.com/hnakamur/vagrant-a
 - Ansible: Server configuration the easy way - Stefan Wienert http://www.stefanwienert.net/blog/2013/09/28/ansible-server-configuration-the-easy-way/
 - Scalable and Understandable Provisioning with Ansible and Vagrant http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/
+
+---
+
+Mark Burns
+
+Twitter: @hydrantmark
+
+Slides: hydrantmark.github.io/vagrant-ansible
+
+Github: github.com/hydrantmark/vagrant-ansible
