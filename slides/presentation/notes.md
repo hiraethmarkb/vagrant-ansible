@@ -6,9 +6,37 @@ Following on from Andrew's talk last month about using Vagrant for creating repe
 
   ## Recap
 
+    - Vagrant tool for managing virtual machines via simple config files and the commandline
+    - Really useful for create dev environments which cna be shared
+    - Comes alive when when with a provisioning tool
+      - Provisioning - setup, configuration
+
   ## Ansible
 
+    - Another tool in the box
+      - Really simple IT orchestration
+      - Others Chef, Puppet, Shell scripts
+    - Not just limited to use with Vagrant
+      - Server, Workstation config
+    - Playbooks (written in YAML)
+      - YAML Ain't Markup Language
+      - data oriented rather than document markup
+    - Modules
+      - Can be executed directly typically on remote hosts
+      - Via Playbooks
+      - Long list - http://docs.ansible.com/list_of_all_modules.html
+    - Push based (with vagrant or ansible-playbook)
+      - playbooks run from control host, pushing to recipients
+      - host inventory file
+    - Pull based (ansible-pull)
+      - Ansible installed on each host
+      - Playbooks in version control
+      - Checks out playbook, and executes
+      - Automate via cron
+
   ## Demo
+
+    - How do you like them Gremlins?
   
   ## More Information
 
@@ -20,6 +48,8 @@ Following on from Andrew's talk last month about using Vagrant for creating repe
       - http://www.ansible.com/home
     - Ansible Documentation
       - http://docs.ansible.com/
+    - YAML
+      - http://www.yaml.org/
    
     - Loads of examples online, Google and Github are your friends
 
@@ -33,9 +63,8 @@ Following on from Andrew's talk last month about using Vagrant for creating repe
       - https://github.com/hnakamur/vagrant-ansible-provisioning-example
     - Ansible: Server configuration the easy way - Stefan Wienert
       - http://www.stefanwienert.net/blog/2013/09/28/ansible-server-configuration-the-easy-way/
-    - Ansible Issue Queue: creating several directories doesn't recursively set owner and group #3141
-      - https://github.com/ansible/ansible/issues/3141
-
+    - Scalable and Understandable Provisioning with Ansible and Vagrant
+      - http://julien.ponge.org/blog/scalable-and-understandable-provisioning-with-ansible-and-vagrant/
 
   ## Questions ?
 
