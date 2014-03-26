@@ -118,6 +118,8 @@ http://lanyrd.com/2014/ccn1402/scxfgy/
   - install ntpd (if not already), stop it, set the date, provide new config, and restart
   - and some extra repositories - makes use of variables
 
+---
+
 # More Information
 
 Loads of examples online
